@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0, shrink-to-fit=yes">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static',filename='sistema.css')}}">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="{{url_for('static', filename='sistema.js')}}"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" 
+    crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" 
+    crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
+    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" 
+    crossorigin="anonymous"></script>
+    <title>Prefeitura de Vassouras - RJ</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark bg-dark" width="100%">
+
+        <center>    
+            <h4><i class="fa fa-address-card"></i>  Eleições Municipais 2020</h4>
+        </center>
+      </nav>
+      <center>
+      <div class="div1">
+          <h3>Eleições Municipais da cidade de Vassouras - RJ</h3>
+        <button type="button" id="vote" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#staticBackdrop">Votar</button>
+      </div>
+      </center>
+  <!-- Modal -->
+  <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="staticBackdropLabel">Candidatos</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <div class="btn-toolbar mb-3" role="toolbar" aria-label="Toolbar with button groups">
+                <div class="btn-group mr-2" role="group" aria-label="First group">
+                  <button type="button" class="btn btn-secondary" id="addCount1" onclick="votar1()">1</button>
+                  <button type="button" class="btn btn-secondary" id="addCount2" onclick="votar2()">2</button>
+                  <button type="button" class="btn btn-secondary" id="addCount3" onclick="votar3()">3</button>
+                  <button type="button" class="btn btn-secondary" id="addCount4" onclick="votar4()">4</button>
+                  <button type="button" class="btn btn-secondary" id="addCount5" onclick="votobranco()">5</button>
+                  <button type="button" class="btn btn-secondary" id="addCount6" onclick="votonulo()">6</button>
+                  </div>
+                  <div>
+                    <p>
+                    <li>Monkey D. Luffy</li>  <li>Vote 1</li>
+                    <li>Kirigaya Kazuto</li>  <li>Vote 2</li>
+                    <li>Edward Elric</li>     <li>Vote 3</li>
+                    <li>Sugou Nobuyuki</li>   <li>Vote 4</li>
+                    <li>Voto em branco</li>   <li>Vote 5</li>
+                    <li>Voto nulo</li>        <li>Vote 6</li>
+                  </ul>                    
+                  <ul>
+                    </p>
+
+                </div>
+
+        </div>
+          <div class="modal-footer">
+          <button type="button" class="btn btn-success" data-dismiss="modal" onclick="conf()">Finalizar</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Cancelar</button>
+          <button type="button" class="btn btn-secondary" onclick="result()">Resultados</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>
