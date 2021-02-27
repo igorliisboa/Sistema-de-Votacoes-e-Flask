@@ -3,7 +3,7 @@ from flask import Flask, render_template
 app = Flask(__name__)
 
 @app.route("/")
-@app.route("/sistema.html")
+@app.route("/sistema")
 def votacao():
     return render_template("sistema.html")
 
